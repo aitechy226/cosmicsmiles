@@ -1,0 +1,27 @@
+# CosmicSmiles Dental — Cloudflare Pages Redirects
+# Permanent (301) redirects to preserve 13 years of SEO
+
+# Fix broken internal link used on old Invisalign page
+/hours--contact-info.html          /contact.html                    301
+
+# Weebly blog post URLs → tips page
+/dental-care-tips/tooth-pain-in-north-brunswick-heres-what-to-do-and-where-to-go  /dental-care-tips.html#tooth-pain-north-brunswick  301
+/dental-care-tips/improve-your-overall-oral-health-with-invisalign-treatment       /dental-care-tips.html#invisalign-oral-health      301
+/dental-care-tips/july-06th-2025                                                    /dental-care-tips.html#dental-bridges              301
+/dental-care-tips/bad-breath-causes-and-prevention                                 /dental-care-tips.html#bad-breath                  301
+/dental-care-tips/best-foods-for-healthier-teeth-eat-your-way-to-a-brighter-smile  /dental-care-tips.html#best-foods                  301
+/dental-care-tips/gingivitis-understanding-the-signs-and-taking-action             /dental-care-tips.html#gingivitis                  301
+/dental-care-tips/unlock-your-confident-smile-with-invisalignr-at-cosmicsmiles-dental  /dental-care-tips.html#invisalign-confident-smile  301
+/dental-care-tips/the-vital-link-between-your-health-and-dental-care-insights-by-dr-sudha  /dental-care-tips.html#oral-systemic-health  301
+/dental-care-tips/your-guide-to-strong-teeth-and-healthy-smiles-preventing-cavities-with-cosmicsmiles-dental  /dental-care-tips.html#cavity-prevention  301
+/dental-care-tips/rapid-relief-for-tooth-pain-powerful-home-remedies               /dental-care-tips.html#tooth-pain-home-remedies    301
+
+# Weebly blog archive and category paths
+/dental-care-tips/category/all          /dental-care-tips.html  301
+/dental-care-tips/category/dental-care  /dental-care-tips.html  301
+/dental-care-tips/archives/*            /dental-care-tips.html  301
+/dental-care-tips/previous/*            /dental-care-tips.html  301
+
+# Weebly RSS and API paths — 404
+/3/feed   /dental-care-tips.html  301
+/w_api/*  /index.html             404
