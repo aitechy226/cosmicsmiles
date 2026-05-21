@@ -58,10 +58,17 @@
         errEl.classList.add('visible');
       }
 
-      // Pill toggle — JS-driven so iOS Safari repaints reliably
+      // Pill toggle — inline styles bypass iOS Safari CSS repaint bugs
       function syncPills(name) {
         document.querySelectorAll('.pill-option input[name="' + name + '"]').forEach(function(r) {
-          r.closest('.pill-option').classList.toggle('pill-selected', r.checked);
+          var label = r.closest('.pill-option');
+          var span = label.querySelector('span');
+          label.classList.toggle('pill-selected', r.checked);
+          if (span) {
+            span.style.background = r.checked ? '#0e7490' : '';
+            span.style.borderColor = r.checked ? '#0e7490' : '';
+            span.style.color = r.checked ? '#ffffff' : '';
+          }
         });
       }
       document.querySelectorAll('.pill-option input[type="radio"]').forEach(function(radio) {
