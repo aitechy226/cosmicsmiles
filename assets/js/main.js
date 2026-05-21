@@ -93,4 +93,16 @@
     });
   });
 
+
+  /* --- 7. SPANISH TRANSLATION LINK --- */
+  /* Old translate.google.com/translate proxy is blocked by Cloudflare.
+     Use the modern translate.goog subdomain which works without proxying. */
+  document.querySelectorAll('a[href*="translate.google.com"]').forEach(function(link) {
+    var path = window.location.pathname;
+    link.href = 'https://cosmicsmilesdental-com.translate.goog' + path
+      + '?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=en&_x_tr_pto=wapp';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  });
+
 })();
