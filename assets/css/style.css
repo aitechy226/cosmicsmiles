@@ -24,7 +24,7 @@
   --shadow-lg:   0 10px 30px rgba(0,0,0,.12), 0 4px 10px rgba(0,0,0,.06);
 
   --header-h:    70px;
-  --section-py:  80px;
+  --section-py:  48px;
 }
 
 /* --- 2. RESET & BOX SIZING --- */
@@ -312,7 +312,7 @@ strong { color: var(--text-dark); font-weight: 600; }
   text-align: center;
   background-size: cover;
   background-position: center;
-  padding: 4rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   overflow: hidden;
 }
 .hero::before {
@@ -636,7 +636,7 @@ strong { color: var(--text-dark); font-weight: 600; }
 
 /* --- 15. CONTACT BANNER --- */
 .contact-banner {
-  padding: 3.5rem 1.5rem;
+  padding: 2rem 1.5rem;
   text-align: center;
   background: var(--teal);
   color: var(--white);
@@ -957,7 +957,7 @@ strong { color: var(--text-dark); font-weight: 600; }
 .site-footer {
   background: var(--navy);
   color: var(--white);
-  padding: 3rem 0 0;
+  padding: 2rem 0 0;
 }
 .footer-grid {
   display: grid;
@@ -1014,7 +1014,7 @@ strong { color: var(--text-dark); font-weight: 600; }
 /* --- 21. CTA BOX --- */
 .cta-box {
   background: var(--teal);
-  padding: 4rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   text-align: center;
   color: var(--white);
 }
@@ -1029,7 +1029,7 @@ strong { color: var(--text-dark); font-weight: 600; }
 
 /* --- 22. SERVICE AREAS --- */
 .service-areas {
-  padding: 3rem 0;
+  padding: 2rem 0;
   text-align: center;
 }
 .service-areas h2 { margin-bottom: 1rem; }
@@ -1145,7 +1145,7 @@ strong { color: var(--text-dark); font-weight: 600; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 4rem 1.5rem;
+  padding: 2.5rem 1.5rem;
 }
 .thank-you-inner { max-width: 520px; }
 .thank-you-check {
@@ -1160,7 +1160,7 @@ strong { color: var(--text-dark); font-weight: 600; }
 .page-hero {
   background: linear-gradient(135deg, var(--teal) 0%, var(--navy) 100%);
   color: var(--white);
-  padding: 4rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   text-align: center;
 }
 .page-hero .section__eyebrow { color: rgba(255,255,255,.7); }
@@ -1253,7 +1253,7 @@ strong { color: var(--text-dark); font-weight: 600; }
    ========================================================= */
 
 @media (max-width: 768px) {
-  :root { --section-py: 56px; }
+  :root { --section-py: 32px; }
 
   .site-nav {
     display: none;
@@ -1298,12 +1298,12 @@ strong { color: var(--text-dark); font-weight: 600; }
   .blog-layout { grid-template-columns: 1fr; }
   .services-two-col { grid-template-columns: 1fr; }
   .blog-sidebar { display: none; }
-  .hero { min-height: 400px; }
+  .hero { min-height: 360px; }
   .trust-strip__inner { justify-content: flex-start; }
 }
 
 @media (max-width: 480px) {
-  :root { --section-py: 40px; }
+  :root { --section-py: 20px; }
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.5rem; }
   .services-grid { grid-template-columns: 1fr; }
@@ -1315,10 +1315,10 @@ strong { color: var(--text-dark); font-weight: 600; }
   .cta-box__btns { flex-direction: column; align-items: center; }
   .form-row { grid-template-columns: 1fr; }
   .credentials-grid { grid-template-columns: 1fr; }
-  .hero { min-height: 420px; padding: 3rem 1rem; }
-  .page-hero { padding: 2.5rem 1rem; }
-  .contact-banner { padding: 2.5rem 1rem; }
-  .cta-box { padding: 2.5rem 1rem; }
+  .hero { min-height: 380px; padding: 1.75rem 1rem; }
+  .page-hero { padding: 1.5rem 1rem; }
+  .contact-banner { padding: 1.5rem 1rem; }
+  .cta-box { padding: 1.5rem 1rem; }
   .thank-you-btns { flex-direction: column; align-items: center; }
   .page-hero__ctas { flex-direction: column; align-items: center; }
 }
