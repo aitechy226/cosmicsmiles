@@ -709,6 +709,49 @@ strong { color: var(--text-dark); font-weight: 600; }
   box-shadow: 0 0 0 3px rgba(14,116,144,.12);
 }
 .form-group textarea { resize: vertical; min-height: 110px; }
+
+/* Touch-friendly pill radio buttons */
+.form-pill-group {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: .35rem;
+}
+.pill-option {
+  flex: 1;
+  min-width: 120px;
+  cursor: pointer;
+}
+.pill-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.pill-option span {
+  display: block;
+  padding: .65rem 1rem;
+  border: 2px solid var(--gray-200);
+  border-radius: 999px;
+  font-size: .9rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--gray-500);
+  background: var(--white);
+  transition: border-color .15s, background .15s, color .15s;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.pill-option input[type="radio"]:checked + span {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: var(--white);
+}
+.pill-option:hover span {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
 .form-radio-group {
   display: flex;
   gap: 1.5rem;
