@@ -44,8 +44,8 @@
   }
   </script>
   <script>
-    // Show form error if query param present
     window.addEventListener('DOMContentLoaded', function() {
+      // Show form error if query param present
       var params = new URLSearchParams(window.location.search);
       var err = params.get('error');
       var errEl = document.getElementById('form-error-msg');
@@ -57,6 +57,17 @@
         }
         errEl.classList.add('visible');
       }
+
+      // Pill toggle — JS-driven so iOS Safari repaints reliably
+      function syncPills(name) {
+        document.querySelectorAll('.pill-option input[name="' + name + '"]').forEach(function(r) {
+          r.closest('.pill-option').classList.toggle('pill-selected', r.checked);
+        });
+      }
+      document.querySelectorAll('.pill-option input[type="radio"]').forEach(function(radio) {
+        syncPills(radio.name); // set initial state
+        radio.addEventListener('change', function() { syncPills(this.name); });
+      });
     });
   </script>
 </head>

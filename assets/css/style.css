@@ -725,8 +725,9 @@ strong { color: var(--text-dark); font-weight: 600; }
 .pill-option input[type="radio"] {
   position: absolute;
   opacity: 0;
-  width: 0;
-  height: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
 }
 .pill-option span {
   display: block;
@@ -741,8 +742,9 @@ strong { color: var(--text-dark); font-weight: 600; }
   transition: border-color .15s, background .15s, color .15s;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 }
-.pill-option input[type="radio"]:checked + span {
+.pill-option.pill-selected span {
   border-color: var(--teal);
   background: var(--teal);
   color: var(--white);
