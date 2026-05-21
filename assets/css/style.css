@@ -754,27 +754,32 @@ strong { color: var(--text-dark); font-weight: 600; }
 
 .form-radio-group {
   display: flex;
-  gap: .75rem;
+  gap: 1rem;
   flex-wrap: wrap;
   margin-top: .35rem;
 }
-.radio-label {
+.radio-item {
   display: flex;
   align-items: center;
-  gap: .6rem;
+  gap: .5rem;
   min-height: 44px;
-  padding: 0 .5rem;
-  font-size: .95rem;
-  font-weight: 500;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
 }
-.radio-label input[type="radio"] {
+.radio-item input[type="radio"] {
   width: 22px;
   height: 22px;
   min-width: 22px;
   accent-color: var(--teal);
-  cursor: pointer;
+  margin: 0;
+  flex-shrink: 0;
+}
+.radio-item label {
+  font-size: .95rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  padding-right: .5rem;
 }
 .form-error {
   background: #fef2f2;

@@ -142,8 +142,14 @@
               <div class="form-group">
                 <label>Are you a new patient?</label>
                 <div class="form-radio-group">
-                  <label class="radio-label"><input type="radio" name="new_patient" value="yes"> Yes, new patient</label>
-                  <label class="radio-label"><input type="radio" name="new_patient" value="no" checked> Existing patient</label>
+                  <div class="radio-item">
+                    <input type="radio" id="patient_yes" name="new_patient" value="yes">
+                    <label for="patient_yes">Yes, new patient</label>
+                  </div>
+                  <div class="radio-item">
+                    <input type="radio" id="patient_no" name="new_patient" value="no" checked>
+                    <label for="patient_no">Existing patient</label>
+                  </div>
                 </div>
               </div>
 
