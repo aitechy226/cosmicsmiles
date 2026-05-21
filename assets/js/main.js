@@ -79,4 +79,18 @@
     }, 5000); // crossfade every 5 seconds
   }
 
+
+  /* --- 6. iOS RADIO BUTTON FIX --- */
+  /* iOS Safari sometimes blocks radio input selection — force it via touch event */
+  document.querySelectorAll('.radio-item').forEach(function(item) {
+    item.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      var input = item.querySelector('input[type="radio"]');
+      if (input) {
+        input.checked = true;
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+  });
+
 })();
