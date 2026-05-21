@@ -24,7 +24,7 @@
   --shadow-lg:   0 10px 30px rgba(0,0,0,.12), 0 4px 10px rgba(0,0,0,.06);
 
   --header-h:    70px;
-  --section-py:  48px;
+  --section-py:  28px;
 }
 
 /* --- 2. RESET & BOX SIZING --- */
@@ -288,11 +288,11 @@ strong { color: var(--text-dark); font-weight: 600; }
   font-size: 1.05rem;
   color: var(--gray-500);
   max-width: 600px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .section-header {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
 }
 .section-header--center {
   text-align: center;
@@ -304,7 +304,7 @@ strong { color: var(--text-dark); font-weight: 600; }
 
 /* --- 8. HERO --- */
 .hero {
-  min-height: 480px;
+  min-height: 360px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -332,13 +332,13 @@ strong { color: var(--text-dark); font-weight: 600; }
   font-family: var(--font-heading);
   color: var(--white);
   font-size: clamp(2rem, 4.5vw, 3rem);
-  margin-bottom: 1rem;
+  margin-bottom: .6rem;
   text-shadow: 0 2px 8px rgba(0,0,0,.25);
 }
 .hero__sub {
   font-size: 1.1rem;
   color: rgba(255,255,255,.92);
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   max-width: 560px;
   margin-left: auto;
   margin-right: auto;
@@ -407,14 +407,14 @@ strong { color: var(--text-dark); font-weight: 600; }
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 1.25rem;
+  margin-top: 1rem;
 }
 .service-card {
   background: var(--white);
   border-radius: var(--radius);
   border-top: 5px solid var(--card-accent, var(--teal));
-  padding: 1.75rem 1.5rem;
+  padding: 1.25rem 1.25rem;
   box-shadow: var(--shadow-sm);
   transition: box-shadow .25s, transform .2s;
   display: flex;
@@ -426,9 +426,9 @@ strong { color: var(--text-dark); font-weight: 600; }
 }
 .service-card__icon {
   font-size: 1.6rem;
-  margin-bottom: 1rem;
-  width: 54px;
-  height: 54px;
+  margin-bottom: .6rem;
+  width: 48px;
+  height: 48px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -487,7 +487,7 @@ strong { color: var(--text-dark); font-weight: 600; }
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
 }
 .split--reverse .split__image { order: 2; }
@@ -526,16 +526,16 @@ strong { color: var(--text-dark); font-weight: 600; }
 .why-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 1.25rem;
+  margin-top: 1rem;
 }
 .why-card {
   background: var(--white);
   border-radius: var(--radius);
-  padding: 1.75rem;
+  padding: 1.25rem;
   box-shadow: var(--shadow-sm);
   display: flex;
-  gap: 1rem;
+  gap: .75rem;
   align-items: flex-start;
   transition: box-shadow .2s;
 }
@@ -571,7 +571,7 @@ strong { color: var(--text-dark); font-weight: 600; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: .75rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .gallery-grid img {
   width: 100%;
@@ -801,8 +801,8 @@ strong { color: var(--text-dark); font-weight: 600; }
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 .ins-logo {
   max-height: 50px;
@@ -948,8 +948,8 @@ strong { color: var(--text-dark); font-weight: 600; }
 .video-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 1.25rem;
+  margin-top: 1rem;
 }
 .video-item h3 { margin-bottom: .5rem; font-size: 1rem; }
 
@@ -1068,8 +1068,8 @@ strong { color: var(--text-dark); font-weight: 600; }
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-top: 2rem;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 .contact-info h2 { margin-bottom: .75rem; }
 .contact-btns { display: flex; flex-direction: column; gap: .75rem; margin-bottom: 1.5rem; }
@@ -1103,13 +1103,13 @@ strong { color: var(--text-dark); font-weight: 600; }
 .credentials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 1.25rem;
+  margin-top: 1rem;
 }
 .credential-card {
   background: var(--white);
   border-radius: var(--radius);
-  padding: 1.75rem;
+  padding: 1.25rem;
   box-shadow: var(--shadow-sm);
   border-top: 3px solid var(--teal);
   text-align: center;
@@ -1166,7 +1166,7 @@ strong { color: var(--text-dark); font-weight: 600; }
 .page-hero .section__eyebrow { color: rgba(255,255,255,.7); }
 .page-hero h1 { color: var(--white); margin-bottom: .75rem; }
 .page-hero p { color: rgba(255,255,255,.85); max-width: 600px; margin: 0 auto; }
-.page-hero__ctas { margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.page-hero__ctas { margin-top: 1.25rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 /* --- 30. INVISALIGN PAGE --- */
 .inv-content {
@@ -1253,7 +1253,7 @@ strong { color: var(--text-dark); font-weight: 600; }
    ========================================================= */
 
 @media (max-width: 768px) {
-  :root { --section-py: 32px; }
+  :root { --section-py: 20px; }
 
   .site-nav {
     display: none;
@@ -1303,7 +1303,7 @@ strong { color: var(--text-dark); font-weight: 600; }
 }
 
 @media (max-width: 480px) {
-  :root { --section-py: 20px; }
+  :root { --section-py: 14px; }
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.5rem; }
   .services-grid { grid-template-columns: 1fr; }
@@ -1315,10 +1315,10 @@ strong { color: var(--text-dark); font-weight: 600; }
   .cta-box__btns { flex-direction: column; align-items: center; }
   .form-row { grid-template-columns: 1fr; }
   .credentials-grid { grid-template-columns: 1fr; }
-  .hero { min-height: 380px; padding: 1.75rem 1rem; }
-  .page-hero { padding: 1.5rem 1rem; }
-  .contact-banner { padding: 1.5rem 1rem; }
-  .cta-box { padding: 1.5rem 1rem; }
+  .hero { min-height: 320px; padding: 1.5rem 1rem; }
+  .page-hero { padding: 1.25rem 1rem; }
+  .contact-banner { padding: 1.25rem 1rem; }
+  .cta-box { padding: 1.25rem 1rem; }
   .thank-you-btns { flex-direction: column; align-items: center; }
   .page-hero__ctas { flex-direction: column; align-items: center; }
 }
