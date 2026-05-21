@@ -94,15 +94,49 @@
   });
 
 
-  /* --- 7. SPANISH TRANSLATION LINK --- */
-  /* Old translate.google.com/translate proxy is blocked by Cloudflare.
-     Use the modern translate.goog subdomain which works without proxying. */
-  document.querySelectorAll('a[href*="translate.google.com"]').forEach(function(link) {
-    var path = window.location.pathname;
-    link.href = 'https://cosmicsmilesdental-com.translate.goog' + path
-      + '?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=en&_x_tr_pto=wapp';
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-  });
+  /* --- 7. GOOGLE TRANSLATE ELEMENT --- */
+  /* Cloudflare blocks all server-side proxy approaches (translate.google.com and
+     translate.goog). The Translate Element widget works client-side — no proxying,
+     no Cloudflare interference. Translates the page DOM in-place. */
+  (function() {
+    // Hidden widget mount point
+    var el = document.createElement('div');
+    el.id = 'google_translate_element';
+    el.style.cssText = 'position:absolute;opacity:0;pointer-events:none;height:0;overflow:hidden;';
+    document.body.appendChild(el);
+
+    window.googleTranslateElementInit = function() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'es',
+        autoDisplay: false
+      }, 'google_translate_element');
+    };
+
+    var s = document.createElement('script');
+    s.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    s.async = true;
+    document.head.appendChild(s);
+
+    // Intercept nav "En Español" links — translate in place instead of navigating
+    document.querySelectorAll('a[href*="translate"]').forEach(function(link) {
+      if (link.textContent.trim() !== 'En Español') return;
+      link.removeAttribute('href');
+      link.style.cursor = 'pointer';
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        function doTranslate() {
+          var sel = document.querySelector('.goog-te-combo');
+          if (sel) {
+            sel.value = 'es';
+            sel.dispatchEvent(new Event('change'));
+          } else {
+            setTimeout(doTranslate, 150);
+          }
+        }
+        doTranslate();
+      });
+    });
+  })();
 
 })();
